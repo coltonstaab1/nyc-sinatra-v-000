@@ -6,6 +6,9 @@ class FiguresController < ApplicationController
 	
 	post '/figures/new' do
 		figure = Figure.find_or_create_by(name: params[:figure][:name])
+		figure.title_ids = params[:figure][:title_ids]
+		landmark = Landmark.find_or_create_by(name: params[:landmark][:name])
+		binding.pry		
 	end
 
 end

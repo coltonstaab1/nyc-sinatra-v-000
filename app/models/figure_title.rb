@@ -1,5 +1,5 @@
 class FigureTitle < ActiveRecord::Base
-	has_many :figures
-	has_many :titles
+	belongs_to :figure
+	belongs_to :title
 
 end
